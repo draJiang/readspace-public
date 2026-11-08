@@ -1,7 +1,4 @@
 import Link from 'next/link'
-import { READSPACE_DOWNLOAD_URL_OVERRIDE, readspaceReleasesUrl } from 'app/config'
-import { fetchReadspaceRelease } from 'app/lib/readspace-release'
-import { DownloadInstallButton } from 'app/components/download-install-button'
 
 const navItems = {
   '/': {
@@ -9,9 +6,7 @@ const navItems = {
   },
 }
 
-export async function Navbar() {
-  const release = await fetchReadspaceRelease()
-
+export function Navbar() {
   return (
     <aside className="-ml-[8px] mb-16 tracking-tight">
       <div className="lg:sticky lg:top-20">
@@ -32,11 +27,12 @@ export async function Navbar() {
               )
             })}
           </div>
-          <DownloadInstallButton
-            assets={release.assets}
-            fallbackHref={readspaceReleasesUrl}
-            overrideHref={READSPACE_DOWNLOAD_URL_OVERRIDE}
-          />
+          <a
+            href="/download"
+            className="shrink-0 transition-all hover:text-neutral-800 dark:hover:text-neutral-200 border border-neutral-300 dark:border-neutral-700 rounded-md py-1 px-2.5 m-1 text-sm tracking-tight"
+          >
+            Download
+          </a>
         </nav>
       </div>
     </aside>
