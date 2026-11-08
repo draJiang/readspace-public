@@ -4,7 +4,7 @@
  */
 export const READSPACE_GITHUB = {
   owner: 'draJiang',
-  repo: 'readspace',
+  repo: 'readspace-public',
 } as const
 
 export const readspaceReleasesUrl = `https://github.com/${READSPACE_GITHUB.owner}/${READSPACE_GITHUB.repo}/releases`
