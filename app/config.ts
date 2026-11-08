@@ -9,6 +9,19 @@ export const READSPACE_GITHUB = {
 
 export const readspaceReleasesUrl = `https://github.com/${READSPACE_GITHUB.owner}/${READSPACE_GITHUB.repo}/releases`
 
+/**
+ * Used when the Releases API is unavailable (private repo, rate limit, etc.)
+ * to build direct `releases/download/{tag}/{asset}` links.
+ */
+export const READSPACE_RELEASE_TAG =
+  process.env.NEXT_PUBLIC_READSPACE_RELEASE_TAG ??
+  process.env.READSPACE_RELEASE_TAG ??
+  'v0.1.0'
+
 /** Optional override when no release exists yet or for a fixed asset URL. */
 export const READSPACE_DOWNLOAD_URL_OVERRIDE =
   process.env.NEXT_PUBLIC_READSPACE_DOWNLOAD_URL
+
+export function releaseAssetDownloadUrl(tag: string, filename: string): string {
+  return `https://github.com/${READSPACE_GITHUB.owner}/${READSPACE_GITHUB.repo}/releases/download/${encodeURIComponent(tag)}/${encodeURIComponent(filename)}`
+}
