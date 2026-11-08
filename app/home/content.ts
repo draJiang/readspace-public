@@ -23,11 +23,12 @@ export const homeSections: HomeSection[] = [
   {
     media: {
       type: 'image',
-      src: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=1200&q=80',
-      alt: 'Laptop on a desk',
+      // 磁盘路径：public/media/example.svg
+      src: '/media/example.svg',
+      alt: '本地图片示例',
     },
     description:
-      "I'm a Vim enthusiast and tab advocate, finding unmatched efficiency in Vim's keystroke commands and tabs' flexibility for personal viewing preferences.",
+      '把图片放在 public/ 下，用以 / 开头的路径引用。例如 public/media/shot.jpg → src: \'/media/shot.jpg\'。',
   },
   {
     media: {
