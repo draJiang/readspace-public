@@ -9,7 +9,7 @@ type DownloadInstallButtonProps = {
   overrideHref?: string
 }
 
-const INSTALLABLE_ASSET = /\.(dmg|zip|exe|msi|appimage)$/i
+const INSTALLABLE_ASSET = /\.(dmg|zip|exe|msi|appimage|tar\.gz)$/i
 
 function installableAssets(
   assets: ReadspaceReleaseAsset[],
@@ -41,8 +41,13 @@ function pickAssetForPlatform(
 
   for (const rule of rules) {
     if (!rule.match) continue
-    const hit = candidates.find((asset) => rule.pattern.test(asset.name))
-    if (hit) return hit
+    const matching = candidates.filter((asset) => rule.pattern.test(asset.name))
+    if (matching.length === 0) continue
+    const dmg =
+      matching.find((asset) => /\.dmg$/i.test(asset.name)) ??
+      matching.find((asset) => /\.(exe|msi)$/i.test(asset.name)) ??
+      matching[0]
+    return dmg
   }
 
   return candidates[0]
