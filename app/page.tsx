@@ -1,18 +1,39 @@
 import { BlogPosts } from 'app/components/posts'
+import { homeContent, type HomeMedia } from 'app/home/content'
+
+function Media({ media }: { media: HomeMedia }) {
+  if (media.type === 'video') {
+    return (
+      <video
+        className="w-full"
+        src={media.src}
+        poster={media.poster}
+        controls
+        playsInline
+        preload="metadata"
+      />
+    )
+  }
+
+  return (
+    <img className="w-full" src={media.src} alt={media.alt ?? ''} />
+  )
+}
 
 export default function Page() {
   return (
     <section>
       <h1 className="mb-8 text-2xl font-semibold tracking-tighter">
-        My Portfolio
+        {homeContent.title}
       </h1>
-      <p className="mb-4">
-        {`I'm a Vim enthusiast and tab advocate, finding unmatched efficiency in
-        Vim's keystroke commands and tabs' flexibility for personal viewing
-        preferences. This extends to my support for static typing, where its
-        early error detection ensures cleaner code, and my preference for dark
-        mode, which eases long coding sessions by reducing eye strain.`}
-      </p>
+      {homeContent.sections.map((section, index) => (
+        <div key={`${section.media.src}-${index}`}>
+          <div className="mb-4">
+            <Media media={section.media} />
+          </div>
+          <p className="mb-4">{section.description}</p>
+        </div>
+      ))}
       <div className="my-8">
         <BlogPosts />
       </div>
