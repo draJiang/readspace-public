@@ -15,6 +15,29 @@ This is a porfolio site template complete with a blog. Includes:
 
 https://portfolio-blog-starter.vercel.app
 
+## Configure the homepage
+
+Edit `app/home/content.ts`. Each item is one media block (image or video) plus a `description`, rendered top-to-bottom on `/`.
+
+```ts
+export const homeSections = [
+  {
+    media: { type: 'image', src: '/media/shot.jpg', alt: 'Project shot' },
+    description: 'A short caption for this piece.',
+  },
+  {
+    media: {
+      type: 'video',
+      src: '/media/demo.mp4',
+      poster: '/media/demo-poster.jpg',
+    },
+    description: 'Optional poster frame + description under the video.',
+  },
+]
+```
+
+Put local assets in `public/` (paths start with `/`), or use remote URLs.
+
 ## How to Use
 
 You can choose from one of the following two methods to use this repository:
