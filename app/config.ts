@@ -1,6 +1,7 @@
 /**
- * Readspace installation packages are published on GitHub Releases
- * (same idea as jietu: versioned assets per platform in each release).
+ * Readspace installation packages are published on GitHub Releases.
+ * The nav Download link hits /download, which resolves releases/latest
+ * on each click (versioned assets such as readspace-macos-<version>.dmg).
  */
 export const READSPACE_GITHUB = {
   owner: 'draJiang',
@@ -9,16 +10,9 @@ export const READSPACE_GITHUB = {
 
 export const readspaceReleasesUrl = `https://github.com/${READSPACE_GITHUB.owner}/${READSPACE_GITHUB.repo}/releases`
 
-/**
- * Used when the Releases API is unavailable (private repo, rate limit, etc.)
- * to build direct `releases/download/{tag}/{asset}` links.
- */
-export const READSPACE_RELEASE_TAG =
-  process.env.NEXT_PUBLIC_READSPACE_RELEASE_TAG ??
-  process.env.READSPACE_RELEASE_TAG ??
-  'v0.1.0'
+export const readspaceLatestReleaseUrl = `${readspaceReleasesUrl}/latest`
 
-/** Optional override when no release exists yet or for a fixed asset URL. */
+/** Optional fixed asset URL. When set, /download always redirects here. */
 export const READSPACE_DOWNLOAD_URL_OVERRIDE =
   process.env.NEXT_PUBLIC_READSPACE_DOWNLOAD_URL
 
