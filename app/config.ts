@@ -16,7 +16,7 @@ export const readspaceReleasesUrl = `https://github.com/${READSPACE_GITHUB.owner
 export const READSPACE_RELEASE_TAG =
   process.env.NEXT_PUBLIC_READSPACE_RELEASE_TAG ??
   process.env.READSPACE_RELEASE_TAG ??
-  'v0.1.0'
+  'v0.1.1'
 
 /** Optional override when no release exists yet or for a fixed asset URL. */
 export const READSPACE_DOWNLOAD_URL_OVERRIDE =
