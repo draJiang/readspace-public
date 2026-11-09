@@ -23,7 +23,7 @@ export const homeSections: HomeSection[] = [
   {
     media: {
       type: 'image',
-      // 磁盘路径：public/media/example.svg
+      // File path on disk: public/media/home_1.png
       src: '/media/home_1.png',
       alt: 'readspace',
     },
