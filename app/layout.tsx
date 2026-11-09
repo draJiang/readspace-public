@@ -6,22 +6,29 @@ import { Navbar } from './components/nav'
 import { Analytics } from '@vercel/analytics/react'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 import Footer from './components/footer'
-import { baseUrl } from './sitemap'
+import { site, siteUrl } from './config'
 
 export const metadata: Metadata = {
-  metadataBase: new URL(baseUrl),
+  metadataBase: new URL(siteUrl),
   title: {
-    default: 'Next.js Portfolio Starter',
-    template: '%s | Next.js Portfolio Starter',
+    default: site.title,
+    template: `%s | ${site.name}`,
   },
-  description: 'This is my portfolio.',
+  description: site.description,
+  keywords: [...site.keywords],
+  applicationName: site.name,
   openGraph: {
-    title: 'Readspace',
-    description: 'This is my portfolio.',
-    url: baseUrl,
-    siteName: 'Readspace',
+    title: site.title,
+    description: site.description,
+    url: siteUrl,
+    siteName: site.name,
     locale: 'en_US',
     type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: site.title,
+    description: site.description,
   },
   robots: {
     index: true,
