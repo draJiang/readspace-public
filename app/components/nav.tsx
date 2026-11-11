@@ -31,7 +31,7 @@ export function Navbar() {
             href="/download"
             className="shrink-0 transition-all hover:text-neutral-800 dark:hover:text-neutral-200 border border-neutral-300 dark:border-neutral-700 rounded-md py-1 px-2.5 m-1 text-sm tracking-tight"
           >
-            Download
+             Download
           </a>
         </nav>
       </div>
