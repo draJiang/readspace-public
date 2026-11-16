@@ -1,5 +1,5 @@
 /**
- * Readspace installation packages are published on GitHub Releases.
+ * Quipu installation packages are published on GitHub Releases.
  * The nav Download link hits /download, which resolves releases/latest
  * on each click (versioned assets such as readspace-macos-<version>.dmg).
  */
@@ -13,12 +13,12 @@ export const siteUrl =
   process.env.NEXT_PUBLIC_SITE_URL ?? 'https://readspace-public.vercel.app'
 
 export const site = {
-  name: 'Readspace',
-  title: 'Readspace',
+  name: 'Quipu',
+  title: 'Quipu',
   description:
     'Spatial reading and knowledge workspace on an infinite canvas. Connect highlights, images, and notes—download for macOS, Windows, and Linux.',
   keywords: [
-    'Readspace',
+    'Quipu',
     'reading',
     'knowledge workspace',
     'infinite canvas',

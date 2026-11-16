@@ -25,7 +25,7 @@ export const homeSections: HomeSection[] = [
       type: 'image',
       // File path on disk: public/media/home_1.png
       src: '/media/home_1.png',
-      alt: 'readspace',
+      alt: 'Quipu',
     },
     description:
       '',

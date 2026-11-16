@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" fill="none">
+  <!-- macOS app icon grid: 824/1024 body (~80.5%) centered in the canvas with transparent margins -->
+  <g transform="translate(50 50)">
+    <rect width="412" height="412" rx="103" fill="#FFFFFF" stroke="rgba(0,0,0,0.06)" stroke-width="1"/>
+    <g transform="scale(1.337662)">
+      <g fill="#262626" transform="translate(25 47) scale(0.83)">
+        <path d="M34 65 Q34 48 51 48 H78 Q98 48 93 68 L62 191 Q59 201 50 201 H44 Q34 201 34 191 Z"/>
+        <path d="M72 199 Q66 195 72 186 L168 39 Q177 25 189 33 L218 53 Q229 61 218 73 L84 199 Q78 204 72 199 Z"/>
+        <path d="M99 211 L251 151 Q273 142 275 163 L277 207 Q278 222 260 222 H102 Q92 222 94 215 Q95 213 99 211 Z"/>
+      </g>
+    </g>
+  </g>
+</svg>
