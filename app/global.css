@@ -6,6 +6,13 @@
 }
 
 :root {
+  --background: #ffffff;
+  --foreground: #0a0a0a;
+  --card: #ffffff;
+  --card-foreground: #0a0a0a;
+  --muted-foreground: #737373;
+  --border: #e5e5e5;
+  --destructive: #dc2626;
   --sh-class: #2d5e9d;
   --sh-identifier: #354150;
   --sh-sign: #8996a3;
@@ -19,6 +26,13 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
+    --background: #000000;
+    --foreground: #fafafa;
+    --card: #0a0a0a;
+    --card-foreground: #fafafa;
+    --muted-foreground: #a3a3a3;
+    --border: #262626;
+    --destructive: #f87171;
     --sh-class: #4c97f8;
     --sh-identifier: white;
     --sh-keyword: #f47067;
@@ -27,6 +41,16 @@
   html {
     color-scheme: dark;
   }
+}
+
+@theme {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
 }
 
 html {
