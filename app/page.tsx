@@ -7,7 +7,7 @@ import { site } from 'app/config'
 export default function Page() {
   return (
     <section>
-      <h1 className="mb-8 flex items-center gap-3 text-2xl font-semibold tracking-tighter">
+      <h1 className="mb-4 flex items-center gap-3 text-2xl font-semibold tracking-tighter">
         <Image
           src="/quipu.svg"
           alt=""
@@ -20,6 +20,9 @@ export default function Page() {
         />
         <span>{site.name}</span>
       </h1>
+      <p className="mb-8 text-neutral-800 dark:text-neutral-200">
+        Quipu is a tool for thought that helps you build a deeper understanding of the knowledge you explore.
+      </p>
       <Alert className="mb-8">
         <BadgeCheckIcon />
         <AlertTitle className="flex flex-wrap items-baseline gap-x-2">
