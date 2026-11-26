@@ -23,7 +23,8 @@ export default function Page() {
       <p className="mb-8 text-neutral-800 dark:text-neutral-200">
         Quipu is a tool for thought that helps you build a deeper understanding of the knowledge you explore.
       </p>
-      <Alert className="mb-8">
+      <HomeSections />
+      <Alert className="mt-12">
         <BadgeCheckIcon />
         <AlertTitle className="flex flex-wrap items-baseline gap-x-2">
           <span className="text-base font-semibold tracking-tight">$9.99</span>
@@ -33,7 +34,6 @@ export default function Page() {
           7-Day Money-Back Guarantee — No Questions Asked.
         </AlertDescription>
       </Alert>
-      <HomeSections />
     </section>
   )
 }
