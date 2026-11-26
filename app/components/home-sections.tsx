@@ -1,3 +1,4 @@
+import { ZoomableImage } from 'app/components/zoomable-image'
 import { homeSections, type HomeMedia, type HomeSection } from 'app/home/content'
 
 function Media({ media }: { media: HomeMedia }) {
@@ -14,15 +15,7 @@ function Media({ media }: { media: HomeMedia }) {
     )
   }
 
-  return (
-    <img
-      className="w-full h-auto"
-      src={media.src}
-      alt={media.alt ?? ''}
-      loading="lazy"
-      decoding="async"
-    />
-  )
+  return <ZoomableImage src={media.src} alt={media.alt} />
 }
 
 function Section({ section }: { section: HomeSection }) {
