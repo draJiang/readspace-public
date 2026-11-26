@@ -1,6 +1,6 @@
 'use client'
 
-import { XIcon, ZoomInIcon } from 'lucide-react'
+import { XIcon } from 'lucide-react'
 
 import { Button } from 'app/components/ui/button'
 import {
@@ -27,7 +27,7 @@ export function ZoomableImage({
         <button
           type="button"
           aria-label={alt ? `Enlarge image: ${alt}` : 'Enlarge image'}
-          className="group relative block w-full cursor-zoom-in rounded-lg border-0 bg-transparent p-0 text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+          className="block w-full cursor-zoom-in rounded-lg border-0 bg-transparent p-0 text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
         >
           <img
             className="block h-auto w-full"
@@ -36,12 +36,6 @@ export function ZoomableImage({
             loading="lazy"
             decoding="async"
           />
-          <span
-            aria-hidden="true"
-            className="pointer-events-none absolute top-2 right-2 inline-flex size-8 items-center justify-center rounded-full bg-black/60 text-white shadow-sm"
-          >
-            <ZoomInIcon className="size-4" />
-          </span>
         </button>
       </DialogTrigger>
       <DialogContent
